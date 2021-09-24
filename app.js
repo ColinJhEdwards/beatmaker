@@ -8,6 +8,9 @@ class DrumKit {
     this.index = 0;
     this.bpm = 150;
   }
+  activePad() {
+    this.classList.toggle("active");
+  }
   //the repeat method will increment until it reaches 8 and then will return to 0
   // 8 because we have 8 pads and want to loop over each one.
   repeat() {
@@ -29,6 +32,10 @@ class DrumKit {
 
 //creating a new drumkit
 const drumKit = new DrumKit();
+
+drumKit.pads.forEach((pad) => {
+  pad.addEventListener(`click`, drumKit.activePad);
+});
 
 drumKit.playBtn.addEventListener("click", () => {
   drumKit.start();
