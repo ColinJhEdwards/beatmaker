@@ -103,6 +103,22 @@ select {
   cursor: pointer;
 }
 
+.slider {
+  width: 30%;
+}
+
+.slider p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.bpm {
+  cursor: pointer;
+  width: 100%;
+  margin: 2rem 0rem;
+}
+
 @keyframes pulse {
   from {
     transform: scale(1);

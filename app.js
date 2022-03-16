@@ -7,6 +7,8 @@ class Drumkit {
     this.hihatSound = document.querySelector(".hihat-sound");
     this.soundSelects = document.querySelectorAll("select");
     this.muteBtn = document.querySelectorAll(".muteBtn");
+    this.bpmSlide = document.querySelector(".bpm");
+    this.bpm = 150;
     this.index = 0;
     this.isPlaying = null;
   }
@@ -37,10 +39,11 @@ class Drumkit {
     this.index++;
   }
   start() {
+    const interval = (60 / this.bpm) * 1000;
     if (!this.isPlaying) {
       this.isPlaying = setInterval(() => {
         this.repeat();
-      }, 1000);
+      }, interval);
     } else {
       clearInterval(this.isPlaying);
       this.isPlaying = null;
@@ -89,6 +92,9 @@ class Drumkit {
       }
     }
   }
+  updateBpm(e) {
+    this.bpm = e.target.value;
+  }
 }
 
 const drumKit = new Drumkit();
@@ -115,4 +121,8 @@ drumKit.muteBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     drumKit.muteSound(e);
   });
+});
+
+drumKit.bpmSlide.addEventListener("change", (e) => {
+  drumKit.updateBpm(e);
 });
