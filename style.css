@@ -62,18 +62,19 @@ select {
   width: 5rem;
   margin: 1rem;
   cursor: pointer;
+  transition: all ease 0.5s;
 }
 
 .kickPad {
-  background: rgb(151, 151, 252);
+  background: rgb(90, 121, 167);
 }
 
 .snarePad {
-  background: rgb(145, 253, 154);
+  background: rgb(128, 177, 132);
 }
 
 .hihatPad {
-  background: rgb(255, 146, 146);
+  background: rgb(182, 100, 100);
 }
 
 .kickPad.active {
@@ -81,7 +82,7 @@ select {
 }
 
 .snarePad.active {
-  background: rgb(1, 255, 22);
+  background: rgb(0, 241, 20);
 }
 
 .hihatPad.active {

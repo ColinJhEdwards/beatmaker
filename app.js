@@ -5,13 +5,13 @@ class Drumkit {
     this.index = 0;
   }
   activePad() {
-    this.classList.add("active");
+    this.classList.toggle("active");
   }
   repeat() {
     let step = this.index % 8;
     const currentPad = document.querySelectorAll(`.b${step}`);
     currentPad.forEach((pad) => {
-      pad.style.animation = `pulse 0.5s alternate ease-in-out 2`;
+      pad.style.animation = `pulse 0.3s alternate ease-in-out 2`;
     });
     console.log(step);
     this.index++;
@@ -24,6 +24,13 @@ class Drumkit {
 }
 
 const drumKit = new Drumkit();
+
+drumKit.pads.forEach((pad) => {
+  pad.addEventListener("click", drumKit.activePad);
+  pad.addEventListener("animationend", () => {
+    pad.style.animation = "";
+  });
+});
 
 drumKit.playBtn.addEventListener("click", () => {
   drumKit.start();
