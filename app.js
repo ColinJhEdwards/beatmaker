@@ -44,6 +44,13 @@ class Drumkit {
       this.isPlaying = null;
     }
   }
+  updateBtn() {
+    if (!this.isPlaying) {
+      this.playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`;
+    } else {
+      this.playBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+    }
+  }
 }
 
 const drumKit = new Drumkit();
@@ -57,4 +64,5 @@ drumKit.pads.forEach((pad) => {
 
 drumKit.playBtn.addEventListener("click", () => {
   drumKit.start();
+  drumKit.updateBtn();
 });
