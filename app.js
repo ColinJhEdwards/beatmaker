@@ -6,6 +6,7 @@ class Drumkit {
     this.snareSound = document.querySelector(".snare-sound");
     this.hihatSound = document.querySelector(".hihat-sound");
     this.index = 0;
+    this.isPlaying = null;
   }
   activePad() {
     this.classList.toggle("active");
@@ -30,13 +31,18 @@ class Drumkit {
         }
       }
     });
-    console.log(step);
+
     this.index++;
   }
   start() {
-    setInterval(() => {
-      this.repeat();
-    }, 1000);
+    if (!this.isPlaying) {
+      this.isPlaying = setInterval(() => {
+        this.repeat();
+      }, 1000);
+    } else {
+      clearInterval(this.isPlaying);
+      this.isPlaying = null;
+    }
   }
 }
 
