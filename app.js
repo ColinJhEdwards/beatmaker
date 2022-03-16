@@ -94,6 +94,8 @@ class Drumkit {
   }
   updateBpm(e) {
     this.bpm = e.target.value;
+    let bpmText = document.querySelector(".bpmNum");
+    bpmText.innerText = e.target.value;
   }
 }
 
