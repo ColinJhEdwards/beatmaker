@@ -15,8 +15,81 @@
     <title>Beatmaker</title>
   </head>
   <body>
-    <div class="sequencer"></div>
-
+    <div class="sequencer">
+      <div class="kick">
+        <div class="kick-controls controls">
+          <h2>Kick</h2>
+          <button class="muteBtn">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="sounds">
+            <option value="./sounds/kick-classic.wav">Classic Kick</option>
+            <option value="./sounds/kick-808.wav">808 Kick</option>
+            <option value="./sounds/kick-heavy.wav">Heavy Kick</option>
+          </select>
+        </div>
+        <div class="pads">
+          <div class="kickPad pad b0"></div>
+          <div class="kickPad pad b2"></div>
+          <div class="kickPad pad b3"></div>
+          <div class="kickPad pad b4"></div>
+          <div class="kickPad pad b5"></div>
+          <div class="kickPad pad b6"></div>
+          <div class="kickPad pad b7"></div>
+          <div class="kickPad pad b8"></div>
+        </div>
+      </div>
+      <div class="snare">
+        <div class="snare-controls controls">
+          <h2>Snare</h2>
+          <button class="muteBtn">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="sounds">
+            <option value="./sounds/snare-acoustic01.wav">
+              Acoustic Snare
+            </option>
+            <option value="./sounds/snare-808.wav">808 Snare</option>
+            <option value="./sounds/snare-vinyl02.wav">Vinyl Snare</option>
+          </select>
+        </div>
+        <div class="pads">
+          <div class="snarePad pad b0"></div>
+          <div class="snarePad pad b2"></div>
+          <div class="snarePad pad b3"></div>
+          <div class="snarePad pad b4"></div>
+          <div class="snarePad pad b5"></div>
+          <div class="snarePad pad b6"></div>
+          <div class="snarePad pad b7"></div>
+          <div class="snarePad pad b8"></div>
+        </div>
+      </div>
+      <div class="hihat">
+        <div class="hihat-controls controls">
+          <h2>Hihat</h2>
+          <button class="muteBtn">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+          <select name="sounds">
+            <option value="./sounds/hihat-acoustic01.wav">
+              Acoustic Hihat
+            </option>
+            <option value="./sounds/hihat-808.wav">808 Hihat</option>
+          </select>
+        </div>
+        <div class="pads">
+          <div class="hihatPad pad b0"></div>
+          <div class="hihatPad pad b2"></div>
+          <div class="hihatPad pad b3"></div>
+          <div class="hihatPad pad b4"></div>
+          <div class="hihatPad pad b5"></div>
+          <div class="hihatPad pad b6"></div>
+          <div class="hihatPad pad b7"></div>
+          <div class="hihatPad pad b8"></div>
+        </div>
+      </div>
+      <button class="playBtn">Play</button>
+    </div>
     <audio src="kick-sound" src="./sounds/kick-classic.wav"></audio>
     <audio src="snare-sound" src="./sounds/snare-acoustic01.wav"></audio>
     <audio src="hihat-sound" src="./sounds/hihat-acoustic01.wav"></audio>

@@ -6,9 +6,79 @@
 
 body {
   font-family: sans-serif;
+  background: rgb(58, 58, 58);
+  color: white;
 }
 
 i,
 svg {
   pointer-events: none;
+}
+
+.sequencer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20rem;
+}
+
+.controls h2 {
+  font-size: 2rem;
+}
+
+.muteBtn {
+  padding: 1rem;
+  color: black;
+  background: white;
+  border: none;
+  font-size: 1rem;
+}
+
+select {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.pads {
+  display: flex;
+}
+
+.pad {
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.kickPad {
+  background: rgb(151, 151, 252);
+}
+
+.snarePad {
+  background: rgb(145, 253, 154);
+}
+
+.hihatPad {
+  background: rgb(255, 146, 146);
+}
+
+.playBtn {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+  background: white;
 }
