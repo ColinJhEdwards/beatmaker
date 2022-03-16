@@ -33,7 +33,7 @@ svg {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 20rem;
+  width: 25rem;
 }
 
 .controls h2 {
@@ -46,6 +46,12 @@ svg {
   background: white;
   border: none;
   font-size: 1rem;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.muteBtn.active {
+  background: red;
 }
 
 select {
