@@ -4,8 +4,17 @@ class Drumkit {
     this.playBtn = document.querySelector(".playBtn");
     this.index = 0;
   }
+  activePad() {
+    this.classList.add("active");
+  }
   repeat() {
-    console.log("test");
+    let step = this.index % 8;
+    const currentPad = document.querySelectorAll(`.b${step}`);
+    currentPad.forEach((pad) => {
+      pad.style.animation = `pulse 0.5s alternate ease-in-out 2`;
+    });
+    console.log(step);
+    this.index++;
   }
   start() {
     setInterval(() => {
