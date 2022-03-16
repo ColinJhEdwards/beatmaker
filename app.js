@@ -5,6 +5,7 @@ class Drumkit {
     this.kickSound = document.querySelector(".kick-sound");
     this.snareSound = document.querySelector(".snare-sound");
     this.hihatSound = document.querySelector(".hihat-sound");
+    this.soundSelects = document.querySelectorAll("select");
     this.index = 0;
     this.isPlaying = null;
   }
@@ -51,6 +52,18 @@ class Drumkit {
       this.playBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
     }
   }
+  changeSound(e) {
+    const sound = e.target.value;
+    if (e.target.classList.contains("kickSelect")) {
+      this.kickSound.src = sound;
+    }
+    if (e.target.classList.contains("snareSelect")) {
+      this.snareSound.src = sound;
+    }
+    if (e.target.classList.contains("hihatSelect")) {
+      this.hihatSound.src = sound;
+    }
+  }
 }
 
 const drumKit = new Drumkit();
@@ -65,4 +78,10 @@ drumKit.pads.forEach((pad) => {
 drumKit.playBtn.addEventListener("click", () => {
   drumKit.start();
   drumKit.updateBtn();
+});
+
+drumKit.soundSelects.forEach((s) => {
+  s.addEventListener("change", (e) => {
+    drumKit.changeSound(e);
+  });
 });
