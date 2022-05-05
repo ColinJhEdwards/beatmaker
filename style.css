@@ -20,6 +20,15 @@ body {
 select {
   padding: 1rem;
   font-size: 2rem;
+  width: 250px;
+}
+
+button {
+  border: none;
+  padding: 1rem;
+  background: white;
+  border-radius: 5px;
+  margin: 0 1rem;
 }
 
 .kickSection,
@@ -35,10 +44,34 @@ select {
   display: flex;
 }
 
+.kickPad {
+  background: rgb(99, 99, 197);
+}
+
+.kickPad.active {
+  background: blue;
+}
+
+.hihatPad {
+  background: rgb(130, 207, 130);
+}
+
+.hihatPad.active {
+  background: green;
+}
+
+.snarePad {
+  background: rgb(218, 117, 117);
+}
+
+.snarePad.active {
+  background: red;
+}
+
 .pad {
   height: 80px;
   width: 80px;
-  background: blue;
+
   margin: 1rem;
   cursor: pointer;
 }
