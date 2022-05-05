@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(35deg, rgb(44, 42, 42), rgb(87, 83, 83));
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+select {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.kickSection,
+.hihatSection,
+.snareSection {
+  display: flex;
+  align-items: center;
+}
+
+.kickPads,
+.snarePads,
+.hihatPads {
+  display: flex;
+}
+
+.pad {
+  height: 80px;
+  width: 80px;
+  background: blue;
+  margin: 1rem;
+  cursor: pointer;
+}
